@@ -1,0 +1,47 @@
+$glassColor: rgba(0, 0, 0, 0.2);
+$blurSize: 20px;
+$subTextColor: rgb(1, 184, 184);
+.card {
+  margin: 20px 0;
+  background-color: $glassColor;
+  backdrop-filter: blur($blurSize);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+  color: #fff;
+  text-align: start;
+
+  h3 {
+    margin: 20px 10px 10px 10px;
+    font-size: 1.3rem;
+  }
+  .date {
+    margin: 0 10px 10px 10px;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  .line_break {
+    width: 80px;
+    height: 3px;
+    background-color: $subTextColor;
+    margin: 0 10px 10px 10px;
+  }
+  .description {
+    margin: 0 10px 10px 10px;
+
+    font-size: 1rem;
+  }
+
+  &:hover {
+    color: $subTextColor;
+    transition: color 0.3s ease-in;
+  }
+}
+
+.img {
+  height: 200px;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+$glassColor: rgba(255, 255, 255, 0.2);
+$blurSize: 20px;
+$subTextColor: rgb(1, 184, 184);
+
+.footer {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  background-color: $glassColor;
+  backdrop-filter: blur($blurSize);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  color: #fff;
+}

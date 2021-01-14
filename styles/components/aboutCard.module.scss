@@ -1,0 +1,69 @@
+$glassColor: rgba(255, 255, 255, 0.2);
+$blurSize: 80px;
+$subTextColor: rgb(1, 184, 184);
+
+.about_card {
+  width: 400px;
+  height: 450px;
+  padding: 10px;
+  margin-left: 50px;
+  text-align: center;
+  background-color: $glassColor;
+  backdrop-filter: blur($blurSize);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+
+  .about_img {
+    width: 250px;
+    height: 200px;
+    margin: 10px auto;
+    background: url(../../public/images/my-face.jpeg) no-repeat center/cover;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+
+  .details_container {
+    .bio {
+      p {
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+      :first-child {
+        margin: 10px 0;
+      }
+      button {
+        margin: 10px 10px 10px 0;
+        padding: 8px 15px;
+        background-color: transparent;
+        border: 2px $subTextColor solid;
+        color: $subTextColor;
+        border-radius: 5px;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: $subTextColor;
+          color: #ffff;
+          cursor: pointer;
+          transition: all 0.3s ease-in;
+        }
+      }
+    }
+  }
+
+  .details {
+    .name_and_position {
+      p {
+        font-size: 1.5rem;
+      }
+      span {
+        font-weight: 300;
+      }
+    }
+    .social_media {
+      p {
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

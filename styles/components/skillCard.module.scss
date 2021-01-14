@@ -1,0 +1,15 @@
+$glassColor: rgba(255, 255, 255, 0.2);
+$blurSize: 80px;
+$subTextColor: rgb(1, 184, 184);
+
+.skill_card {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  margin-left: 40px;
+  background-color: $glassColor;
+  backdrop-filter: blur($blurSize);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
