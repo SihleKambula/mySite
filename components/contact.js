@@ -1,4 +1,5 @@
 import style from "../styles/components/contact.module.scss";
+import SocialIcons from "./SocialIcons";
 
 export default function Contact() {
   return (
@@ -13,11 +14,7 @@ export default function Contact() {
         <a href="mailto:kambulasihle@gmail.com" className={style.btn}>
           Email Me
         </a>
-        <div>
-          <i>Github</i>
-          <i>LinkedIn</i>
-          <i>Twitter</i>
-        </div>
+        <SocialIcons />
       </div>
     </div>
   );

@@ -1,0 +1,10 @@
+@import "../shared/shared.scss";
+.social_icons {
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    &:hover {
+      color: $subTextColor;
+    }
+  }
+}

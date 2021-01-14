@@ -1,9 +1,11 @@
 import style from "../styles/components/projectCard.module.scss";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 export default function ProjectCard({ project }) {
   return (
     <div className={style.container}>
-      <a href={project.url}>
+      <a href={project.url} target="blank">
         <div
           className={style.img}
           style={{
@@ -22,8 +24,12 @@ export default function ProjectCard({ project }) {
           return <span key={index}>{tech}</span>;
         })}
         <div className={style.icons}>
-          <i>GitHub</i>
-          <i>View</i>
+          <a href={project.gitHubUrl} target="blank">
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </a>
+          <a href={project.url} target="blank">
+            <FontAwesomeIcon icon={faExternalLinkAlt} size="2x" />
+          </a>
         </div>
       </div>
     </div>

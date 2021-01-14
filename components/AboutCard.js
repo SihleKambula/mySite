@@ -1,4 +1,9 @@
 import style from "../styles/components/aboutCard.module.scss";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import SocialIcons from "./SocialIcons";
+
+library.add(fab);
 
 export default function AboutCard() {
   return (
@@ -17,7 +22,7 @@ export default function AboutCard() {
             Joburg, South Africa. I enjoy building everything from small
             business site, personal websites and interactive web apps.
           </p>
-          <p>Social media</p>
+          <SocialIcons />
           {/* <p>
             If you are seeking a web presence or an employer looking to hire,
             I'm the person for the job.

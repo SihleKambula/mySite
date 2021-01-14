@@ -7,6 +7,13 @@ import Blog from "../components/blog";
 import Contact from "../components/contact";
 import Footer from "../components/Footer";
 
+import {
+  faDesktop,
+  faDatabase,
+  faMobileAlt,
+  faSitemap,
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Home() {
   return (
     <Layout>
@@ -39,12 +46,12 @@ export default function Home() {
                 <div className={style.cards_of_skills}>
                   <div className={style.skill_card}>
                     <SkillCard
-                      icon="icon"
+                      icon={faDesktop}
                       end="Frontend"
                       skills={["HTML & CSS", "JavaScript", "SASS", "React.JS"]}
                     />
                     <SkillCard
-                      icon="icon"
+                      icon={faDatabase}
                       end="Backend"
                       skills={["Node.JS", "MySQL", "MongoDB", "Firebase"]}
                     />
@@ -52,12 +59,12 @@ export default function Home() {
                   <h3 style={{ margin: "10px" }}>Interests</h3>
                   <div className={style.skill_card}>
                     <SkillCard
-                      icon="icon"
+                      icon={faMobileAlt}
                       end="Mobile App Development"
                       skills={["Flutter", "Dart", "Kotlin"]}
                     />
                     <SkillCard
-                      icon="icon"
+                      icon={faSitemap}
                       end="Algorithms"
                       skills={["Data Structure", "Codewars", "HackerRank"]}
                     />

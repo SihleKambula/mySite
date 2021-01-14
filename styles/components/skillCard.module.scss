@@ -11,8 +11,19 @@
   border-radius: 10px;
   background-clip: padding-box;
 
+  i {
+    color: $glassColorLight;
+  }
+
   h3 {
     margin: 5px 0;
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2px 0;
   }
 }
 
@@ -28,6 +39,7 @@
 @media screen and (max-width: 680px) {
   .skill_card {
     margin: 0 5px;
-    height: 150px;
+    min-height: 100%;
+    max-height: 180px;
   }
 }

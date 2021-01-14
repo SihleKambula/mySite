@@ -1,7 +1,6 @@
 // Navigation bar
 import Link from "next/link";
 import style from "../styles/components/navbar.module.scss";
-import cx from "classnames";
 
 export default function Navbar() {
   return (

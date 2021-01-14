@@ -63,6 +63,13 @@ $subTextColor: rgb(1, 184, 184);
   }
   .icons {
     margin-top: 15px;
+    a {
+      margin-right: 10px;
+
+      &:hover {
+        color: $subTextColor;
+      }
+    }
   }
 }
 

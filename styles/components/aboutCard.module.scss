@@ -2,7 +2,7 @@
 
 .about_card {
   width: 400px;
-  height: 450px;
+  height: 100%;
   padding: 10px;
   margin-left: 50px;
   text-align: center;
@@ -25,10 +25,9 @@
       p {
         font-weight: 300;
         font-size: 1.2rem;
-      }
-      :first-child {
         margin: 10px 0;
       }
+
       button {
         margin: 10px 10px 10px 0;
         padding: 8px 15px;
@@ -55,12 +54,6 @@
       }
       span {
         font-weight: 300;
-      }
-    }
-    .social_media {
-      p {
-        font-weight: 300;
-        font-size: 1.2rem;
       }
     }
   }
