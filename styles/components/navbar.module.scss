@@ -1,5 +1,7 @@
 $glassColor: rgba(0, 0, 0, 0.2);
 $blurSize: 10px;
+$glassColorLight: rgba(255, 255, 255, 0.2);
+
 .navbar_container {
   position: fixed;
   width: 100%;
@@ -8,11 +10,9 @@ $blurSize: 10px;
   background-color: $glassColor;
   backdrop-filter: blur($blurSize);
   z-index: 1;
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
+  transition: 0.3s;
 }
 
 .navbar_links {
@@ -32,15 +32,77 @@ $blurSize: 10px;
       cursor: pointer;
     }
   }
-
-  .active {
-    border-bottom: 2px solid cyan;
-    color: rgba(255, 255, 255, 0.3);
-  }
 }
 
 .resume {
   color: cyan;
   margin-left: 20px;
   text-transform: lowercase;
+}
+
+@media screen and (max-width: 680px) {
+  .show {
+    transform: translateX(0);
+  }
+  .hide {
+    transform: translateX(-100%);
+  }
+  .navbar_container {
+    padding: 5px;
+    height: 100%;
+    width: 50%;
+  }
+
+  .show_buger {
+    :nth-child(1) {
+      transform: rotate(45deg);
+      width: 80%;
+    }
+    :nth-child(2) {
+      transform: rotate(-45deg);
+      width: 100%;
+    }
+    :nth-child(3) {
+      display: none;
+    }
+  }
+  .hambuger {
+    display: block;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    padding: 5px 5px;
+
+    div {
+      margin: 8px 0;
+      width: 100%;
+      height: 3px;
+      background-color: $glassColor;
+      backdrop-filter: blur($blurSize);
+      transition: 0.3s;
+    }
+    :nth-child(2) {
+      width: 80%;
+    }
+    :nth-child(3) {
+      width: 60%;
+    }
+  }
+  .navbar_links {
+    margin-top: 50px;
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+
+    .navbar_link,
+    .resume {
+      margin-left: 0;
+      margin-top: 10px;
+      font-size: 2rem;
+    }
+  }
 }
