@@ -54,12 +54,12 @@ export default function Home() {
                     <SkillCard
                       icon="icon"
                       end="Mobile App Development"
-                      skills={["HTML & CSS", "JavaScript", "SASS", "React.JS"]}
+                      skills={["Flutter", "Dart", "Kotlin"]}
                     />
                     <SkillCard
                       icon="icon"
                       end="Algorithms"
-                      skills={["Node.JS", "MySQL", "MongoDB", "Firebase"]}
+                      skills={["Data Structure", "Codewars", "HackerRank"]}
                     />
                   </div>
                 </div>

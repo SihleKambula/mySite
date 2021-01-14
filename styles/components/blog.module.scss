@@ -1,7 +1,8 @@
-$subTextColor: rgb(1, 184, 184);
+@import "../shared/shared.scss";
+
 .blog {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: center;
 
   h1 {
@@ -20,4 +21,34 @@ $subTextColor: rgb(1, 184, 184);
   margin: 0 100px;
   grid-template-columns: repeat(3, 300px);
   grid-gap: 30px;
+}
+
+// Tablet view
+@media screen and (max-width: 768px) {
+  .blog {
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
+  .blogs {
+    width: 100%;
+    margin: 0 50px;
+    grid-template-columns: repeat(2, 320px);
+    grid-gap: 10px;
+  }
+}
+
+// mobile view
+@media screen and (max-width: 680px) {
+  .blog {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .blogs {
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 100%);
+    grid-gap: 10px;
+  }
 }

@@ -1,4 +1,4 @@
-$glassColor: rgba(255, 255, 255, 0.2);
+$glassColor: rgba(0, 0, 0, 0.2);
 $blurSize: 80px;
 $subTextColor: rgb(1, 184, 184);
 
@@ -64,7 +64,7 @@ $subTextColor: rgb(1, 184, 184);
 }
 .about {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 10px auto;
 
   h1 {
     margin: 10px 0;
@@ -91,6 +91,70 @@ $subTextColor: rgb(1, 184, 184);
     .skill_card {
       display: flex;
       margin-bottom: 10px;
+    }
+  }
+}
+
+// Tablet view
+
+@media screen and (max-width: 768px) {
+  .intro_card {
+    margin: 0 20px;
+
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+// mobile view
+@media screen and (max-width: 680px) {
+  .intro_card {
+    flex-direction: column;
+    margin: 0 20px;
+    height: 400px;
+
+    img {
+      height: 180px;
+      margin: 0 auto;
+    }
+
+    div {
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.9rem;
+    }
+  }
+
+  .about {
+    width: 100%;
+    margin: 0;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  // About
+  .about_glass {
+    padding: 20px;
+    margin: 0;
+
+    .card_section {
+      display: flex;
+      flex-direction: column;
+      .skill_card {
+        display: flex;
+        margin: 10px 0;
+      }
     }
   }
 }

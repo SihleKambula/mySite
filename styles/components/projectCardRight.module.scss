@@ -65,3 +65,67 @@ $subTextColor: rgb(1, 184, 184);
     margin-top: 15px;
   }
 }
+
+// Tablet view
+
+@media screen and (max-width: 768px) {
+  .img {
+    width: 500px;
+    height: 300px;
+    margin-left: 300px;
+  }
+  .details {
+    left: 10px;
+  }
+}
+
+// mobile view
+@media screen and (max-width: 680px) {
+  .container {
+    width: 100%;
+    position: initial;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    order: 1;
+  }
+  .img {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+  }
+
+  .details {
+    order: 2;
+    position: inherit;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: start;
+    background-color: $glassColor;
+    backdrop-filter: blur($blurSize);
+    border-top: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0 0 10px 10px;
+    background-clip: padding-box;
+
+    .featured {
+      margin: 0;
+    }
+
+    .para {
+      margin: 10px 0;
+      padding: 0;
+      background-color: transparent;
+      backdrop-filter: blur(0);
+      border: none;
+    }
+
+    span {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+}

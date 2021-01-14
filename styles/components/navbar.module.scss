@@ -1,4 +1,4 @@
-$glassColor: rgba(255, 255, 255, 0.2);
+$glassColor: rgba(0, 0, 0, 0.2);
 $blurSize: 10px;
 .navbar_container {
   position: fixed;
@@ -37,4 +37,10 @@ $blurSize: 10px;
     border-bottom: 2px solid cyan;
     color: rgba(255, 255, 255, 0.3);
   }
+}
+
+.resume {
+  color: cyan;
+  margin-left: 20px;
+  text-transform: lowercase;
 }

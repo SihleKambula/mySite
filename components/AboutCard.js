@@ -1,4 +1,3 @@
-import Link from "next/link";
 import style from "../styles/components/aboutCard.module.scss";
 
 export default function AboutCard() {

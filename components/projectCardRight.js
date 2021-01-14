@@ -15,7 +15,7 @@ export default function ProjectCardRight({ project }) {
           <i>View</i>
         </div>
       </div>
-      <a href={project.url}>
+      <a href={project.url} className={style.imgContainer}>
         <div
           className={style.img}
           style={{

@@ -1,6 +1,4 @@
-$glassColor: rgba(0, 0, 0, 0.2);
-$blurSize: 20px;
-$subTextColor: rgb(1, 184, 184);
+@import "../shared/shared.scss";
 .card {
   margin: 20px 0;
   background-color: $glassColor;
@@ -28,7 +26,6 @@ $subTextColor: rgb(1, 184, 184);
   }
   .description {
     margin: 0 10px 10px 10px;
-
     font-size: 1rem;
   }
 
@@ -43,5 +40,12 @@ $subTextColor: rgb(1, 184, 184);
   overflow: hidden;
   img {
     width: 100%;
+  }
+}
+
+// Tablet view
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 0 auto;
   }
 }

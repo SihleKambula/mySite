@@ -1,6 +1,5 @@
-$glassColor: rgba(0, 0, 0, 0.2);
-$blurSize: 40px;
-$subTextColor: rgb(1, 184, 184);
+@import "../shared/shared.scss";
+
 .contact {
   max-width: 1200px;
   height: 80vh;
@@ -47,4 +46,16 @@ $subTextColor: rgb(1, 184, 184);
   border-radius: 5px;
   background-clip: padding-box;
   color: $subTextColor;
+}
+
+// mobile view
+@media screen and (max-width: 680px) {
+  .contact {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .container {
+    width: 100%;
+  }
 }

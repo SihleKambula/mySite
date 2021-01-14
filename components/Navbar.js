@@ -11,7 +11,7 @@ export default function Navbar() {
           <p>SK</p>
         </div>
         <ul className={style.navbar_links}>
-          <li className={cx(style.navbar_link, style.active)}>
+          <li className={style.navbar_link}>
             <Link href="#home">Home</Link>
           </li>
           <li className={style.navbar_link}>
@@ -26,7 +26,7 @@ export default function Navbar() {
           <li className={style.navbar_link}>
             <Link href="#contact">Contact</Link>
           </li>
-          <li className={style.navbar_link}>
+          <li className={style.resume}>
             <Link href="/">Resume</Link>
           </li>
         </ul>

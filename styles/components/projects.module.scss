@@ -1,7 +1,7 @@
 $subTextColor: rgb(1, 184, 184);
 .projects {
   max-width: 1200px;
-  margin: 30px auto;
+  margin: 35px auto;
   text-align: center;
 
   h1 {
@@ -11,6 +11,20 @@ $subTextColor: rgb(1, 184, 184);
 
     span {
       color: $subTextColor;
+    }
+  }
+}
+
+// Tablet view
+
+@media screen and (max-width: 768px) {
+}
+
+// mobile view
+@media screen and (max-width: 680px) {
+  .projects {
+    h1 {
+      font-size: 2rem;
     }
   }
 }
