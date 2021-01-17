@@ -8,13 +8,12 @@ const apps = [
     technologies: ["Flutter", "Firebase"],
   },
   {
-    imageUrl: "/images/urlShortner.webp",
-    url: "https://lilink.netlify.app/",
-    gitHubUrl: "https://github.com/SKammy/Frontend-url-shorten.git",
-    name: "Lil Link",
-    description:
-      "A URL Shortener app. Users can also create an account and save the shorten link for future use.",
-    technologies: ["React.js", "Node.js", "Firebase", "MongoDB"],
+    imageUrl: "/images/scrummy.jpg",
+    url: "/",
+    gitHubUrl: "/",
+    name: "Scrummy Ice Cream App",
+    description: "A ice cream ordering app filled with all the flavours.",
+    technologies: ["Flutter", "Firebase"],
   },
 ];
 export default apps;
