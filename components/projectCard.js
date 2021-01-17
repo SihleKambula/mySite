@@ -2,9 +2,42 @@ import style from "../styles/components/projectCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+
 export default function ProjectCard({ project }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("show");
+    }
+  }, [controls, inView]);
+
+  const containerVariant = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    show: {
+      opacity: 1,
+      x: 1,
+    },
+    transition: {
+      duration: 1,
+    },
+  };
+
   return (
-    <div className={style.container}>
+    <motion.div
+      className={style.container}
+      variants={containerVariant}
+      initial="hidden"
+      ref={ref}
+      animate={controls}
+    >
       <a href={project.url} target="blank">
         <div
           className={style.img}
@@ -32,6 +65,6 @@ export default function ProjectCard({ project }) {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

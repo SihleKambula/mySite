@@ -1,9 +1,37 @@
 import style from "../styles/components/contact.module.scss";
 import SocialIcons from "./SocialIcons";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Contact() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("show");
+    }
+  }, [controls, inView]);
+
+  const container = {
+    hidden: {
+      opacity: 0,
+      scale: 0,
+    },
+    show: {
+      opacity: 1,
+      scale: 1,
+    },
+  };
   return (
-    <div className={style.contact}>
+    <motion.div
+      className={style.contact}
+      variants={container}
+      initial="hidden"
+      ref={ref}
+      animate={controls}
+    >
       <h1>
         Get In <span>Touch</span>
       </h1>
@@ -16,6 +44,6 @@ export default function Contact() {
         </a>
         <SocialIcons />
       </div>
-    </div>
+    </motion.div>
   );
 }

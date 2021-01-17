@@ -1,4 +1,4 @@
-$subTextColor: rgb(1, 184, 184);
+@import "../shared/shared.scss";
 .projects {
   max-width: 1200px;
   margin: 35px auto;
@@ -15,8 +15,33 @@ $subTextColor: rgb(1, 184, 184);
   }
 }
 
-// Tablet view
+.tab_container {
+  display: flex;
+  margin: 40px 0;
+  justify-content: center;
 
+  .tabs {
+    button {
+      padding: 10px 15px;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: 0.2s;
+
+      :focus {
+        border: none;
+      }
+    }
+    .active {
+      background: $glassColor;
+      backdrop-filter: blur($blurSize);
+      transition: 0.2s;
+    }
+  }
+}
+
+// Tablet view
 @media screen and (max-width: 768px) {
 }
 

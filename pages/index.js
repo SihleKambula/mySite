@@ -6,6 +6,9 @@ import style from "../styles/Home.module.scss";
 import Blog from "../components/blog";
 import Contact from "../components/contact";
 import Footer from "../components/Footer";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 import {
   faDesktop,
@@ -14,14 +17,39 @@ import {
   faSitemap,
 } from "@fortawesome/free-solid-svg-icons";
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      delay: 0.5,
+    },
+  },
+};
+
 export default function Home() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("show");
+    }
+  }, [controls, inView]);
   return (
     <Layout>
       <div className={style.background}>
         {/* landing card */}
-        <div className={style.landing_section} id="home">
+        <motion.div
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className={style.landing_section}
+          id="home"
+        >
           <div className={style.intro_card}>
-            <img src="/images/full-body.jpeg" />
+            <img src="/images/intro_img.webp" />
             <div>
               <h1>Hi, I'm</h1>
               <h2>
@@ -30,20 +58,31 @@ export default function Home() {
               <h3>I use code to solve problems.</h3>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* start section */}
         <main>
           {/* About section */}
           <section className={style.about} id="about">
             <div className={style.about_glass}>
-              <h1>
+              <motion.h1
+                variants={container}
+                initial="hidden"
+                ref={ref}
+                animate={controls}
+              >
                 About <span>Me</span>
-              </h1>
+              </motion.h1>
 
               <div className={style.card_section}>
                 <AboutCard />
-                <div className={style.cards_of_skills}>
+                <motion.div
+                  className={style.cards_of_skills}
+                  variants={container}
+                  initial="hidden"
+                  ref={ref}
+                  animate={controls}
+                >
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faDesktop}
@@ -69,7 +108,7 @@ export default function Home() {
                       skills={["Data Structure", "Codewars", "HackerRank"]}
                     />
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </section>

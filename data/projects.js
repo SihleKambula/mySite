@@ -1,6 +1,6 @@
 const projects = [
   {
-    imageUrl: "/images/racm-lap.jpg",
+    imageUrl: "/images/racm.webp",
     url: "https://racm.co.za/",
     gitHubUrl: "https://github.com/SihleKambula/racm",
     name: "Rise African Child Media",
@@ -9,7 +9,7 @@ const projects = [
     technologies: ["Next.js", "YouTube API", "Gsap.js"],
   },
   {
-    imageUrl: "/images/urlLap.jpg",
+    imageUrl: "/images/urlShortner.webp",
     url: "https://lilink.netlify.app/",
     gitHubUrl: "https://github.com/SKammy/Frontend-url-shorten.git",
     name: "Lil Link",

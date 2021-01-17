@@ -2,9 +2,43 @@ import style from "../styles/components/projectCardRight.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+
 export default function ProjectCardRight({ project }) {
+  // Animation
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("show");
+    }
+  }, [controls, inView]);
+
+  const containerVariant = {
+    hidden: {
+      opacity: 0,
+      x: -300,
+    },
+    show: {
+      opacity: 1,
+      x: 1,
+    },
+    transition: {
+      duration: 1,
+    },
+  };
+
   return (
-    <div className={style.container}>
+    <motion.div
+      className={style.container}
+      variants={containerVariant}
+      initial="hidden"
+      ref={ref}
+      animate={controls}
+    >
       <div className={style.details}>
         <span className={style.featured}>Featured Project</span>
         <h3>{project.name}</h3>
@@ -31,6 +65,6 @@ export default function ProjectCardRight({ project }) {
           <div className={style.overlay}></div>
         </div>
       </a>
-    </div>
+    </motion.div>
   );
 }

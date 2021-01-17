@@ -6,7 +6,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   position: fixed;
   width: 100%;
   height: 50px;
-  padding: 13px 100px;
+  padding: 5px 100px;
   background-color: $glassColor;
   backdrop-filter: blur($blurSize);
   z-index: 1;
@@ -15,9 +15,29 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   transition: 0.3s;
 }
 
+.logo {
+  overflow: hidden;
+  div {
+    overflow: hidden;
+    width: 40px;
+    height: 100%;
+    .cls_1 {
+      fill: none;
+      stroke: #00aeef;
+      stroke-miterlimit: 10;
+      stroke-width: 4px;
+    }
+    .cls_2 {
+      font-size: 57px;
+      fill: #00aeef;
+      font-family: ubuntu;
+    }
+  }
+}
+
 .navbar_links {
   display: flex;
-
+  padding: 8px 0;
   .navbar_link {
     margin-left: 20px;
     padding-bottom: 2px;
@@ -51,6 +71,13 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     padding: 5px;
     height: 100%;
     width: 50%;
+  }
+  .logo {
+    position: absolute;
+    width: 100%;
+    div {
+      width: 50px;
+    }
   }
 
   .show_buger {
