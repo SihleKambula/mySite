@@ -8,7 +8,7 @@ const apps = [
     technologies: ["Flutter", "Firebase"],
   },
   {
-    imageUrl: "/images/scrummy.jpg",
+    imageUrl: "/images/scrummy.webp",
     url: "/",
     gitHubUrl: "/",
     name: "Scrummy Ice Cream App",

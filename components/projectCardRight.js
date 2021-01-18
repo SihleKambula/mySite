@@ -32,13 +32,7 @@ export default function ProjectCardRight({ project }) {
   };
 
   return (
-    <motion.div
-      className={style.container}
-      variants={containerVariant}
-      initial="hidden"
-      ref={ref}
-      animate={controls}
-    >
+    <div className={style.container}>
       <div className={style.details}>
         <span className={style.featured}>Featured Project</span>
         <h3>{project.name}</h3>
@@ -65,6 +59,6 @@ export default function ProjectCardRight({ project }) {
           <div className={style.overlay}></div>
         </div>
       </a>
-    </motion.div>
+    </div>
   );
 }
