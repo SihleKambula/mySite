@@ -1,6 +1,6 @@
 const apps = [
   {
-    imageUrl: "/images/legendsApp.png",
+    imageUrl: "/images/legends.webp",
     url: "/",
     gitHubUrl: "/",
     name: "Legends Barber Booking App",

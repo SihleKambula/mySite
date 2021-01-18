@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
+      {/*  Show the different state of the navbar*/}
       <div
         className={cx(style.hambuger, isOpen ? style.show_buger : null)}
         onClick={() => setIsOpen(!isOpen)}

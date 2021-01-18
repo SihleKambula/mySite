@@ -9,6 +9,26 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Projects() {
+  const MobileApps = () => {
+    return apps.map((app, index) => {
+      return index % 2 === 0 ? (
+        <ProjectCard project={app} key={index} />
+      ) : (
+        <ProjectCardRight project={app} key={index} />
+      );
+    });
+  };
+
+  const Websites = () => {
+    return projects.map((project, index) => {
+      return index % 2 == 0 ? (
+        <ProjectCard project={project} key={index} />
+      ) : (
+        <ProjectCardRight project={project} key={index} />
+      );
+    });
+  };
+
   const [showApps, setShowApps] = useState(false);
 
   const controls = useAnimation();
@@ -90,21 +110,7 @@ export default function Projects() {
       </motion.div>
 
       {/* Show apps when showApps is true */}
-      {showApps
-        ? apps.map((app, index) => {
-            return index / 2 == 0 ? (
-              <ProjectCard project={app} key={index} />
-            ) : (
-              <ProjectCardRight project={app} key={index} />
-            );
-          })
-        : projects.map((project, index) => {
-            return index / 2 == 0 ? (
-              <ProjectCard project={project} key={index} />
-            ) : (
-              <ProjectCardRight project={project} key={index} />
-            );
-          })}
+      {showApps ? <MobileApps /> : <Websites />}
     </motion.div>
   );
 }

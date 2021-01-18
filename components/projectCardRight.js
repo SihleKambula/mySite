@@ -43,8 +43,8 @@ export default function ProjectCardRight({ project }) {
         <span className={style.featured}>Featured Project</span>
         <h3>{project.name}</h3>
         <p className={style.para}>{project.description}</p>
-        {project.technologies.map((tech) => {
-          return <span>{tech}</span>;
+        {project.technologies.map((tech, index) => {
+          return <span key={index}>{tech}</span>;
         })}
         <div className={style.icons}>
           <a href={project.gitHubUrl} target="blank">

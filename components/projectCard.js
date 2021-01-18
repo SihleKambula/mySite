@@ -53,6 +53,8 @@ export default function ProjectCard({ project }) {
         <span className={style.featured}>Featured Project</span>
         <h3>{project.name}</h3>
         <p className={style.para}>{project.description}</p>
+
+        {/* Loop of the different technologies given */}
         {project.technologies.map((tech, index) => {
           return <span key={index}>{tech}</span>;
         })}

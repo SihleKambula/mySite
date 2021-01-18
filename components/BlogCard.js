@@ -5,7 +5,7 @@ export default function BlogCard() {
     <a href="/">
       <div className={style.card}>
         <div className={style.img}>
-          <img src="/images/bg_2.jpg" />
+          <img src="/images/bg_blog.webp" />
         </div>
         <h3>Coffee and Code</h3>
         <p className={style.date}>08 January 2021</p>
