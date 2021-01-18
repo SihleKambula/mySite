@@ -23,10 +23,7 @@ export default function ProjectCard({ project }) {
     },
     show: {
       opacity: 1,
-      x: 1,
-    },
-    transition: {
-      duration: 1,
+      x: 0,
     },
   };
 
