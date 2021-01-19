@@ -1,21 +1,20 @@
 import style from "../styles/components/blogCard.module.scss";
-
-export default function BlogCard() {
+import Link from "next/link";
+import Moment from "react-moment";
+export default function BlogCard({ blogPost }) {
   return (
-    <a href="/">
+    <Link href={"/post/" + blogPost.slug.current}>
       <div className={style.card}>
         <div className={style.img}>
-          <img src="/images/bg_blog.webp" />
+          <img src={blogPost.mainImage.asset.url} />
         </div>
-        <h3>Coffee and Code</h3>
-        <p className={style.date}>08 January 2021</p>
-        <div className={style.line_break}></div>
-        <p className={style.description}>
-          Rise African Child Media (RACM) is a creative digital platform that
-          aims to tell stories in the TV and film industry, stories that can
-          change the enviroment.
+        <h3>{blogPost.title}</h3>
+        <p className={style.date}>
+          <Moment format="D MMM YYYY">{blogPost.publishedAt}</Moment>
         </p>
+        <div className={style.line_break}></div>
+        <p className={style.description}>{blogPost.body[1].children[0].text}</p>
       </div>
-    </a>
+    </Link>
   );
 }

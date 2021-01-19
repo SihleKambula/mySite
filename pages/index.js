@@ -9,6 +9,13 @@ import Footer from "../components/Footer";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+// import sanityClient from "./api/client";
+// import sanityClient from "@sanity/client";
+// const client = sanityClient({
+//   projectId: "gmrv3avf",
+//   dataset: "production",
+//   useCdn: true,
+// });
 
 import {
   faDesktop,
@@ -27,7 +34,7 @@ const container = {
   },
 };
 
-export default function Home() {
+function Home() {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -36,6 +43,7 @@ export default function Home() {
       controls.start("show");
     }
   }, [controls, inView]);
+
   return (
     <Layout>
       <div className={style.background}>
@@ -118,12 +126,6 @@ export default function Home() {
             <Projects />
           </section>
 
-          {/* Note worthy projects section */}
-
-          {/* <section id="projects">
-            <Projects />
-          </section> */}
-
           {/* Blog section */}
 
           <section id="blog">
@@ -144,3 +146,26 @@ export default function Home() {
     </Layout>
   );
 }
+
+// export async function getStaticProps() {
+//   const query = `*[_type == "post"]{
+//           title,
+//           slug,
+//             publishedAt,
+//             body,
+//       mainImage{
+//         asset->{
+//           _id,
+//           url
+//         }
+//       }
+
+//     }`;
+//   const res = await client.fetch(query);
+//   const data = await res.json();
+
+//   return {
+//     props: { data },
+//   };
+// }
+export default Home;

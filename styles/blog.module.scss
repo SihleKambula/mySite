@@ -1,0 +1,36 @@
+.main {
+  margin: 25px auto;
+  width: 720px;
+}
+.imgContainer {
+  width: 720px;
+  max-width: 100%;
+}
+
+.mainImage {
+  width: 100%;
+}
+.body h1 {
+  margin: 10px 0;
+}
+
+.body p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 680px) {
+  .main {
+    width: 320px;
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
+  .body {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
