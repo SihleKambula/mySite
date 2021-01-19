@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
 html,
 body,
 * {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
+  font-family: "Ubuntu", sans-serif;
   overflow-x: hidden;
 }
 
