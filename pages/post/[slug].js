@@ -2,7 +2,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import style from "../../styles/blog.module.scss";
 import { useEffect, useState } from "react";
 import BlockContent from "@sanity/block-content-to-react";
-import Navbar from "../../components/Navbar";
 
 const Blog = ({ title, body, image }) => {
   const [imageUrl, setImageUrl] = useState("");
@@ -16,7 +15,6 @@ const Blog = ({ title, body, image }) => {
     setImageUrl(imgBuilder.image(image));
   }, [image]);
 
-  console.log(imageUrl);
   return (
     <div>
       <div className={style.main}>

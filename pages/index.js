@@ -34,7 +34,7 @@ const container = {
   },
 };
 
-function Home() {
+function Home({ posts }) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -129,7 +129,7 @@ function Home() {
           {/* Blog section */}
 
           <section id="blog">
-            <Blog />
+            <Blog blogs={posts} />
           </section>
 
           {/* Contact section */}
@@ -147,25 +147,25 @@ function Home() {
   );
 }
 
-// export async function getStaticProps() {
-//   const query = `*[_type == "post"]{
-//           title,
-//           slug,
-//             publishedAt,
-//             body,
-//       mainImage{
-//         asset->{
-//           _id,
-//           url
-//         }
-//       }
+export async function getStaticProps(pageContext) {
+  const query = encodeURIComponent(`*[ _type == "post"]`);
+  const url = `https://gmrv3avf.api.sanity.io/v1/data/query/production?query=${query}`;
+  // fetch post from sanity
+  const result = await fetch(url).then((data) => data.json());
 
-//     }`;
-//   const res = await client.fetch(query);
-//   const data = await res.json();
+  if (!result.result || !result.result.length) {
+    return {
+      props: {
+        posts: [],
+      },
+    };
+  } else {
+    return {
+      props: {
+        posts: result.result,
+      },
+    };
+  }
+}
 
-//   return {
-//     props: { data },
-//   };
-// }
 export default Home;
