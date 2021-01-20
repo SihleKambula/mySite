@@ -2,6 +2,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import style from "../../styles/blog.module.scss";
 import { useEffect, useState } from "react";
 import BlockContent from "@sanity/block-content-to-react";
+import Link from "next/link";
 
 const Blog = ({ title, body, image }) => {
   const [imageUrl, setImageUrl] = useState("");

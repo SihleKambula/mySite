@@ -1,6 +1,8 @@
 .main {
   margin: 25px auto;
   width: 720px;
+  height: 100%;
+  overflow: hidden;
 }
 .imgContainer {
   width: 720px;
@@ -11,7 +13,17 @@
   width: 100%;
 }
 .body h1 {
-  margin: 10px 0;
+  margin: 15px 0;
+  font-weight: 500;
+}
+.body h2 {
+  margin: 15px 0;
+  font-weight: 500;
+}
+.body h3 {
+  margin: 15px 0;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .body p {
