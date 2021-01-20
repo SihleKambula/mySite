@@ -114,7 +114,7 @@ $subTextColor: rgb(1, 184, 184);
 @media screen and (max-width: 680px) {
   .intro_card {
     flex-direction: column;
-    margin: 0 20px;
+    margin: 0 10px;
     height: 400px;
 
     img {
@@ -145,7 +145,7 @@ $subTextColor: rgb(1, 184, 184);
 
   // About
   .about_glass {
-    padding: 20px;
+    padding: 10px;
     margin: 0;
 
     .card_section {
