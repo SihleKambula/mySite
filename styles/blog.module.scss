@@ -1,8 +1,28 @@
 .main {
   margin: 25px auto;
-  width: 720px;
+  width: 80%;
   height: 100%;
   overflow: hidden;
+}
+.landing {
+  display: flex;
+}
+
+.title_author {
+  padding-top: 40px;
+  h1 {
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: rgb(66, 66, 66);
+  }
+  p {
+    font-size: 1.3rem;
+    color: rgb(0, 177, 177);
+
+    span {
+      color: rgb(66, 66, 66);
+    }
+  }
 }
 .imgContainer {
   width: 720px;
@@ -14,18 +34,25 @@
 }
 
 // Blog headings
+.body {
+  width: 720px;
+  margin: 0 auto;
+}
 .body h1 {
   margin: 15px 0;
   font-weight: 500;
+  color: rgb(66, 66, 66);
 }
 .body h2 {
   margin: 15px 0;
   font-weight: 500;
+  color: rgb(66, 66, 66);
 }
 .body h3 {
   margin: 15px 0;
   font-weight: 500;
   font-size: 1.2rem;
+  color: rgb(66, 66, 66);
 }
 
 // Body paragraph
@@ -33,6 +60,7 @@
   font-size: 1.2rem;
   letter-spacing: 1px;
   text-align: justify;
+  color: rgb(66, 66, 66);
 }
 
 @media screen and (max-width: 680px) {
@@ -42,6 +70,9 @@
       font-size: 1.8rem;
       font-weight: 500;
     }
+  }
+  .landing {
+    flex-direction: column;
   }
   .body {
     h1 {

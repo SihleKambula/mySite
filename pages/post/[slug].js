@@ -2,7 +2,6 @@ import imageUrlBuilder from "@sanity/image-url";
 import style from "../../styles/blog.module.scss";
 import { useEffect, useState } from "react";
 import BlockContent from "@sanity/block-content-to-react";
-import Link from "next/link";
 
 const Blog = ({ title, body, image }) => {
   const [imageUrl, setImageUrl] = useState("");
@@ -19,13 +18,21 @@ const Blog = ({ title, body, image }) => {
   return (
     <div>
       <div className={style.main}>
-        <h1>{title}</h1>
-
-        {imageUrl && (
-          <div className={style.imgContainer}>
-            <img src={imageUrl} className={style.mainImage} />
+        <div className={style.landing}>
+          <div className={style.title_author}>
+            <h1>{title}</h1>
+            <p>
+              <span>Written by </span>
+              Sihle Kambula
+            </p>
           </div>
-        )}
+
+          {imageUrl && (
+            <div className={style.imgContainer}>
+              <img src={imageUrl} className={style.mainImage} />
+            </div>
+          )}
+        </div>
 
         <div className={style.body}>
           <BlockContent blocks={body} />
