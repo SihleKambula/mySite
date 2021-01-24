@@ -33,9 +33,11 @@ export default function ProjectCard({ project }) {
           <a href={project.gitHubUrl} target="blank">
             <FontAwesomeIcon icon={faGithub} size="2x" />
           </a>
-          <a href={project.url} target="blank">
-            <FontAwesomeIcon icon={faExternalLinkAlt} size="2x" />
-          </a>
+          {project.url && (
+            <a href={project.url} target="blank">
+              <FontAwesomeIcon icon={faExternalLinkAlt} size="2x" />
+            </a>
+          )}
         </div>
       </div>
     </div>
