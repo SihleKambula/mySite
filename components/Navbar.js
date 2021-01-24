@@ -82,7 +82,9 @@ export default function Navbar() {
               <Link href="#contact">Contact</Link>
             </li>
             <li className={style.resume}>
-              <Link href="/">Resume</Link>
+              <a href="/resume" target="blank">
+                Resume
+              </a>
             </li>
           </ul>
         </nav>
