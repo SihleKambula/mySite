@@ -1,6 +1,6 @@
 .main {
   margin: 25px auto;
-  width: 80%;
+  width: 90%;
   height: 100%;
   overflow: hidden;
 }
@@ -54,7 +54,10 @@
   font-size: 1.2rem;
   color: rgb(66, 66, 66);
 }
-
+// Body image
+.body img {
+  width: 100%;
+}
 // Body paragraph
 .body p {
   font-size: 1.2rem;
@@ -65,7 +68,6 @@
 
 @media screen and (max-width: 680px) {
   .main {
-    width: 320px;
     h1 {
       font-size: 1.8rem;
       font-weight: 500;
@@ -75,6 +77,7 @@
     flex-direction: column;
   }
   .body {
+    width: 100%;
     h1 {
       font-size: 1.5rem;
     }

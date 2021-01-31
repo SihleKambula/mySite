@@ -52,7 +52,17 @@ export async function getServerSideProps(pageContext) {
   }
 
   const query = encodeURIComponent(
-    `*[_type == "post" && slug.current == "${pageSlug}"]`
+    `*[_type == "post" && slug.current == "${pageSlug}"]{
+      title,
+      mainImage,
+      body[]{
+        ...,
+        asset->{
+          ...,
+          "_key": _id
+        }
+      }
+    }`
   );
   const url = `https://gmrv3avf.api.sanity.io/v1/data/query/production?query=${query}`;
 
