@@ -2,9 +2,6 @@ import style from "../styles/components/projectCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
-// import { useInView } from "react-intersection-observer";
-// import { motion, useAnimation } from "framer-motion";
-// import { useEffect } from "react";
 
 export default function ProjectCard({ project }) {
   return (

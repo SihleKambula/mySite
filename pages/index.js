@@ -24,37 +24,12 @@ import {
   faSitemap,
 } from "@fortawesome/free-solid-svg-icons";
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-};
-
-function Home({ posts }) {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("show");
-    }
-  }, [controls, inView]);
-
+const Home = ({ posts }) => {
   return (
     <Layout>
       <div className={style.background}>
         {/* landing card */}
-        <motion.div
-          initial={{ x: "-100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className={style.landing_section}
-          id="home"
-        >
+        <div className={style.landing_section} id="home">
           <div className={style.intro_card}>
             <img src="/images/intro_img.webp" />
             <div>
@@ -65,41 +40,30 @@ function Home({ posts }) {
               <h3>I use code to solve problems.</h3>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* start section */}
         <main>
           {/* About section */}
           <section className={style.about} id="about">
             <div className={style.about_glass}>
-              <motion.h1
-                variants={container}
-                initial="hidden"
-                ref={ref}
-                animate={controls}
-              >
+              <h1>
                 About <span>Me</span>
-              </motion.h1>
+              </h1>
 
               <div className={style.card_section}>
                 <AboutCard />
-                <motion.div
-                  className={style.cards_of_skills}
-                  variants={container}
-                  initial="hidden"
-                  ref={ref}
-                  animate={controls}
-                >
+                <div className={style.cards_of_skills}>
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faDesktop}
                       end="Frontend"
-                      skills={["HTML & CSS", "JavaScript", "SASS", "React.JS"]}
+                      skills={["SASS", "JavaScript", "React.JS", "Next.JS"]}
                     />
                     <SkillCard
                       icon={faDatabase}
                       end="Backend"
-                      skills={["Node.JS", "MySQL", "MongoDB", "Firebase"]}
+                      skills={["Firebase", "Node.JS", "Express.JS", "MongoDB"]}
                     />
                   </div>
                   <h3 style={{ margin: "10px" }}>Interests</h3>
@@ -107,15 +71,15 @@ function Home({ posts }) {
                     <SkillCard
                       icon={faMobileAlt}
                       end="Mobile App Development"
-                      skills={["Flutter", "Dart", "Kotlin"]}
+                      skills={["Flutter", "Dart"]}
                     />
                     <SkillCard
                       icon={faSitemap}
                       end="Algorithms"
-                      skills={["Data Structure", "Codewars", "HackerRank"]}
+                      skills={["Codewars", "HackerRank"]}
                     />
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </section>
@@ -145,9 +109,9 @@ function Home({ posts }) {
       </div>
     </Layout>
   );
-}
+};
 
-export async function getStaticProps(pageContext) {
+export async function getStaticProps() {
   const query = encodeURIComponent(`*[ _type == "post"]`);
   const url = `https://gmrv3avf.api.sanity.io/v1/data/query/production?query=${query}`;
   // fetch post from sanity

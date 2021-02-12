@@ -5,33 +5,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Contact() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("show");
-    }
-  }, [controls, inView]);
-
-  const container = {
-    hidden: {
-      opacity: 0,
-      x: "-100%",
-    },
-    show: {
-      opacity: 1,
-      x: "0",
-    },
-  };
   return (
-    <motion.div
-      className={style.contact}
-      variants={container}
-      initial="hidden"
-      ref={ref}
-      animate={controls}
-    >
+    <div className={style.contact}>
       <h1>
         Get In <span>Touch</span>
       </h1>
@@ -44,6 +19,6 @@ export default function Contact() {
         </a>
         <SocialIcons />
       </div>
-    </motion.div>
+    </div>
   );
 }
