@@ -9,7 +9,10 @@ export default function Layout({ children }) {
         <title>Sihle Kambula</title>
       </Head>
 
-      <div className={style.container}>
+      <div
+        className={style.container}
+        style={{ background: 'url("images/bg_4.webp") no-repeat center/cover' }}
+      >
         <Navbar />
         {children}
       </div>
