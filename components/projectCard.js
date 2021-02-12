@@ -27,9 +27,12 @@ export default function ProjectCard({ project }) {
           return <span key={index}>{tech}</span>;
         })}
         <div className={style.icons}>
-          <a href={project.gitHubUrl} target="blank">
-            <FontAwesomeIcon icon={faGithub} size="2x" />
-          </a>
+          {project.gitHubUrl && (
+            <a href={project.gitHubUrl} target="blank">
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
+          )}
+
           {project.url && (
             <a href={project.url} target="blank">
               <FontAwesomeIcon icon={faExternalLinkAlt} size="2x" />
