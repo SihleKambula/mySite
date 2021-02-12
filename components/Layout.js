@@ -7,7 +7,6 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>Sihle Kambula</title>
-        <link rel="shortcut icon" href="images/logo2.svg" type="image/x-icon" />
       </Head>
 
       <div className={style.container}>
