@@ -37,7 +37,7 @@ const Home = ({ posts }) => {
               <h2>
                 Sihle <span>Kambula.</span>
               </h2>
-              <h3>I use code to solve problems.</h3>
+              <h3>I use React.js to solve problems.</h3>
             </div>
           </div>
         </div>
