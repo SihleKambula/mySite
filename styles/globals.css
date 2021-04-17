@@ -21,3 +21,23 @@ ul {
 * {
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:rgba(0, 0, 0, 0.2);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:  rgb(1, 184, 184);
+  border-radius: 20px;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:  rgb(1, 126, 126);
+}
