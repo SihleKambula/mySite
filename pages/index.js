@@ -6,9 +6,7 @@ import style from "../styles/Home.module.scss";
 import Blog from "../components/blog";
 import Contact from "../components/contact";
 import Footer from "../components/Footer";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+
 // import sanityClient from "./api/client";
 // import sanityClient from "@sanity/client";
 // const client = sanityClient({
@@ -29,9 +27,9 @@ const Home = ({ posts }) => {
     <Layout>
       <div className={style.background}>
         {/* landing card */}
-        <div className={style.landing_section} id="home">
+        <div className={style.landing_section} id='home'>
           <div className={style.intro_card}>
-            <img src="/images/intro_img.webp" />
+            <img src='/images/intro_img.webp' />
             <div>
               <h1>Hi, I'm</h1>
               <h2>
@@ -45,7 +43,7 @@ const Home = ({ posts }) => {
         {/* start section */}
         <main>
           {/* About section */}
-          <section className={style.about} id="about">
+          <section className={style.about} id='about'>
             <div className={style.about_glass}>
               <h1>
                 About <span>Me</span>
@@ -57,12 +55,12 @@ const Home = ({ posts }) => {
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faDesktop}
-                      end="Frontend"
+                      end='Frontend'
                       skills={["SASS", "JavaScript", "React.JS", "Next.JS"]}
                     />
                     <SkillCard
                       icon={faDatabase}
-                      end="Backend"
+                      end='Backend'
                       skills={["Firebase", "Node.JS", "Express.JS", "MongoDB"]}
                     />
                   </div>
@@ -70,12 +68,12 @@ const Home = ({ posts }) => {
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faMobileAlt}
-                      end="Mobile App Development"
+                      end='Mobile App Development'
                       skills={["Flutter", "Dart"]}
                     />
                     <SkillCard
                       icon={faSitemap}
-                      end="Algorithms"
+                      end='Algorithms'
                       skills={["Codewars", "HackerRank"]}
                     />
                   </div>
@@ -86,19 +84,19 @@ const Home = ({ posts }) => {
 
           {/* Projects section */}
 
-          <section id="projects">
+          <section id='projects'>
             <Projects />
           </section>
 
           {/* Blog section */}
 
-          <section id="blog">
+          <section id='blog'>
             <Blog blogs={posts} />
           </section>
 
           {/* Contact section */}
 
-          <section id="contact">
+          <section id='contact'>
             <Contact />
           </section>
         </main>

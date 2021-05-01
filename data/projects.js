@@ -17,14 +17,5 @@ const projects = [
       "IQmates is a eLearning platform for students who are interested in Maths, Computer Science, Art, Business etc. I was reponsible for the profile page, changed the UI and added in features such as checkbox completion for completed lessons. ",
     technologies: ["JavaScript", "PHP", "MySQL", "Bootstrap"],
   },
-  {
-    imageUrl: "/images/racmMac.webp",
-    url: "https://racm.co.za/",
-    gitHubUrl: "https://github.com/SihleKambula/racm",
-    name: "Rise African Child Media",
-    description:
-      "Rise African Child Media (RACM) is a creative digital platform that aims to tell stories in the TV and film industry, stories that can change the enviroment.",
-    technologies: ["Next.js", "YouTube API", "Gsap.js"],
-  },
 ];
 export default projects;

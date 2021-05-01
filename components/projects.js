@@ -1,6 +1,7 @@
 import { useState } from "react";
-import projects from "../data/projects";
+import webApps from "../data/projects";
 import apps from "../data/apps";
+import websites from "../data/websites";
 import style from "../styles/components/projects.module.scss";
 import ProjectCard from "./projectCard";
 import ProjectCardRight from "./projectCardRight";
@@ -17,7 +18,17 @@ export default function Projects() {
   };
 
   const Websites = () => {
-    return projects.map((project, index) => {
+    return websites.map((website, index) => {
+      return index % 2 === 0 ? (
+        <ProjectCard project={website} key={index} />
+      ) : (
+        <ProjectCardRight project={website} key={index} />
+      );
+    });
+  };
+
+  const WebApps = () => {
+    return webApps.map((project, index) => {
       return index % 2 == 0 ? (
         <ProjectCard project={project} key={index} />
       ) : (
@@ -27,6 +38,7 @@ export default function Projects() {
   };
 
   const [showApps, setShowApps] = useState(false);
+  const [showWebApps, setShowWebApps] = useState(false);
 
   return (
     <div className={style.projects}>
@@ -37,24 +49,42 @@ export default function Projects() {
       <div className={style.tab_container}>
         <div className={style.tabs}>
           <button
-            className={!showApps ? style.active : null}
-            onClick={() => setShowApps(false)}
+            className={!showApps && !showWebApps ? style.active : null}
+            onClick={() => {
+              setShowApps(false);
+              setShowWebApps(false);
+            }}
           >
-            Websites
+            Web Apps
+          </button>
+        </div>
+        <div className={style.tabs}>
+          <button
+            className={showWebApps ? style.active : null}
+            onClick={() => {
+              setShowApps(false);
+              setShowWebApps(true);
+            }}
+          >
+            Web sites
           </button>
         </div>
         <div className={style.tabs}>
           <button
             className={showApps ? style.active : null}
-            onClick={() => setShowApps(true)}
+            onClick={() => {
+              setShowApps(true);
+              setShowWebApps(false);
+            }}
           >
             Mobile Apps
           </button>
         </div>
       </div>
 
-      {/* Show apps when showApps is true */}
-      {showApps ? <MobileApps /> : <Websites />}
+      {!showApps && !showWebApps && <WebApps />}
+      {showWebApps && <Websites />}
+      {showApps && <MobileApps />}
     </div>
   );
 }
