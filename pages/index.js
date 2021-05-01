@@ -68,7 +68,7 @@ const Home = ({ posts }) => {
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faMobileAlt}
-                      end='Mobile App Development'
+                      end='Mobile Apps'
                       skills={["Flutter", "Dart"]}
                     />
                     <SkillCard
