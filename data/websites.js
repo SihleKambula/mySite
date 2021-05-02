@@ -9,7 +9,7 @@ const websites = [
     technologies: ["Next.js", "YouTube API", "Gsap.js"],
   },
   {
-    imageUrl: "/images/ziyatech.jpg",
+    imageUrl: "/images/ziyaMockup.webp",
     url: "https://ziyatech.co.za/",
     gitHubUrl: "https://github.com/SihleKambula/ziyatech",
     name: "Ziyatech",
