@@ -28,17 +28,18 @@
       color: #fff;
       font-size: 1.2rem;
       transition: 0.2s;
-
-      :focus {
-        border: none;
-      }
     }
     .active {
       background: $glassColor;
       backdrop-filter: blur($blurSize);
       transition: 0.2s;
+      color: $subTextColor;
     }
   }
+}
+
+.icon {
+  display: none;
 }
 
 // Tablet view
@@ -52,5 +53,17 @@
     h1 {
       font-size: 2rem;
     }
+  }
+
+  .tabs {
+    button {
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .icon {
+    display: inline;
   }
 }

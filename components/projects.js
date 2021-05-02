@@ -5,6 +5,13 @@ import websites from "../data/websites";
 import style from "../styles/components/projects.module.scss";
 import ProjectCard from "./projectCard";
 import ProjectCardRight from "./projectCardRight";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faDiceD6,
+  faMobileAlt,
+  faFileCode,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Projects() {
   const MobileApps = () => {
@@ -55,7 +62,8 @@ export default function Projects() {
               setShowWebApps(false);
             }}
           >
-            Web Apps
+            <FontAwesomeIcon icon={faDiceD6} className={style.icon} size='2x' />
+            <p> Web Apps</p>
           </button>
         </div>
         <div className={style.tabs}>
@@ -66,7 +74,12 @@ export default function Projects() {
               setShowWebApps(true);
             }}
           >
-            Web sites
+            <FontAwesomeIcon
+              icon={faFileCode}
+              className={style.icon}
+              size='2x'
+            />
+            <p>Websites</p>
           </button>
         </div>
         <div className={style.tabs}>
@@ -77,7 +90,12 @@ export default function Projects() {
               setShowWebApps(false);
             }}
           >
-            Mobile Apps
+            <FontAwesomeIcon
+              icon={faMobileAlt}
+              className={style.icon}
+              size='2x'
+            />
+            <p>Mobile Apps</p>
           </button>
         </div>
       </div>
