@@ -75,7 +75,7 @@ $subTextColor: rgb(1, 184, 184);
 }
 
 // Tablet view
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .container {
     margin-bottom: 50px;
   }
@@ -86,7 +86,11 @@ $subTextColor: rgb(1, 184, 184);
 
   .details {
     top: 20px;
-    left: 260px;
+    left: 280px;
+
+    .icons {
+      height: auto;
+    }
   }
 }
 

@@ -49,11 +49,17 @@
   color: $subTextColor;
 }
 
+@media screen and (max-width: 800px) {
+  .contact {
+    height: 50vh;
+  }
+}
 // mobile view
 @media screen and (max-width: 680px) {
   .contact {
     margin-top: 60px;
     padding: 0 10px;
+    height: 80vh;
     h1 {
       font-size: 2rem;
     }

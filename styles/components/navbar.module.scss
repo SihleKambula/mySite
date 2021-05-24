@@ -75,8 +75,10 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   .logo {
     position: absolute;
     width: 100%;
+
     div {
       width: 50px;
+      margin: 0 auto;
     }
   }
 
@@ -127,7 +129,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
 
     .navbar_link,
     .resume {
-      margin-left: 0;
+      text-align: center;
       margin-top: 10px;
       font-size: 2rem;
     }
