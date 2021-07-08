@@ -14,7 +14,7 @@ export default function Contact() {
         <p>
           Have a question or want to work together? My inbox is always open.
         </p>
-        <a href="mailto:kambulasihle@gmail.com" className={style.btn}>
+        <a href='mailto:kambulasihle@gmail.com' className={style.btn}>
           Email Me
         </a>
         <SocialIcons />

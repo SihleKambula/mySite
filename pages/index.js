@@ -6,6 +6,7 @@ import style from "../styles/Home.module.scss";
 import Blog from "../components/blog";
 import Contact from "../components/contact";
 import Footer from "../components/Footer";
+import { Link } from "next/link";
 
 // import sanityClient from "./api/client";
 // import sanityClient from "@sanity/client";
@@ -29,13 +30,19 @@ const Home = ({ posts }) => {
         {/* landing card */}
         <div className={style.landing_section} id='home'>
           <div className={style.intro_card}>
-            <img src='/images/intro_img.webp' />
+            {/* <img src='/images/intro_img.webp' /> */}
             <div>
-              <h1>Hi, I'm</h1>
-              <h2>
-                Sihle <span>Kambula.</span>
-              </h2>
-              <h3>I use React.js to solve problems.</h3>
+              <p>Hello hello, my name is</p>
+              <h2>Sihle Kambula,</h2>
+              <h3>Frontend Web Developer</h3>
+              <h4>
+                I am a front-end web developer / freelancer from Joburg, South
+                Africa. I enjoy building everything from small business site,
+                personal websites and interactive web apps.
+              </h4>
+              <a href='mailto:kambulasihle@gmail.com' className={style.btn}>
+                Hire Me
+              </a>
             </div>
           </div>
         </div>
@@ -52,19 +59,23 @@ const Home = ({ posts }) => {
               <div className={style.card_section}>
                 <AboutCard />
                 <div className={style.cards_of_skills}>
+                  {/* <h3
+                    style={{ margin: "10px", fontWeight: "400", opacity: 0.8 }}
+                  >
+                    Skills
+                  </h3> */}
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faDesktop}
                       end='Frontend'
-                      skills={["SASS", "JavaScript", "React.JS", "Next.JS"]}
+                      skills={["React.JS", "Next.JS", "JavaScript", "Sass"]}
                     />
                     <SkillCard
                       icon={faDatabase}
                       end='Backend'
-                      skills={["Firebase", "Node.JS", "Express.JS", "MongoDB"]}
+                      skills={["Firebase", "Node.JS", "MongoDB", "PHP"]}
                     />
                   </div>
-                  <h3 style={{ margin: "10px" }}>Interests</h3>
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faMobileAlt}
@@ -73,8 +84,8 @@ const Home = ({ posts }) => {
                     />
                     <SkillCard
                       icon={faSitemap}
-                      end='Algorithms'
-                      skills={["Codewars", "HackerRank"]}
+                      end='Tools'
+                      skills={["GitHub", "Netlify", "Heroku", "Figma"]}
                     />
                   </div>
                 </div>

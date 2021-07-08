@@ -10,12 +10,19 @@ export default function Navbar() {
     <>
       {/*  Show the different state of the navbar*/}
       <div
-        className={cx(style.hambuger, isOpen ? style.show_buger : null)}
+        className={cx(style.hambuger, isOpen ? style.open : null)}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className={cx(style.lines, isOpen ? style.open : null)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div className={style.logo}>
+          <div>
+            <img src='images/logo2.svg' alt='logo' />
+          </div>
+        </div>
       </div>
       <header>
         <nav
@@ -24,9 +31,9 @@ export default function Navbar() {
             isOpen ? style.show : style.hide
           )}
         >
-          <div className={style.logo}>
+          <div className={style.logo_dsk}>
             <div>
-              <img src="images/logo2.svg" alt="logo" />
+              <img src='images/logo2.svg' alt='logo' />
             </div>
           </div>
 
@@ -35,34 +42,34 @@ export default function Navbar() {
               className={style.navbar_link}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Link href="#home">Home</Link>
+              <Link href='#home'>Home</Link>
             </li>
             <li
               className={style.navbar_link}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Link href="#about">About</Link>
+              <Link href='#about'>About</Link>
             </li>
             <li
               className={style.navbar_link}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Link href="#projects">Projects</Link>
+              <Link href='#projects'>Projects</Link>
             </li>
             <li
               className={style.navbar_link}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Link href="#blog">Blog</Link>
+              <Link href='#blog'>Blog</Link>
             </li>
             <li
               className={style.navbar_link}
               onClick={() => setIsOpen(!isOpen)}
             >
-              <Link href="#contact">Contact</Link>
+              <Link href='#contact'>Contact</Link>
             </li>
             <li className={style.resume}>
-              <a href="/resume" target="blank">
+              <a href='/resume' target='blank'>
                 Resume
               </a>
             </li>

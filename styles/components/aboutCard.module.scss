@@ -26,6 +26,8 @@
         font-weight: 300;
         font-size: 1.2rem;
         margin: 10px 0;
+        line-height: 1.5rem;
+        opacity: 0.6;
       }
 
       button {
@@ -50,7 +52,9 @@
   .details {
     .name_and_position {
       p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        opacity: 0.6;
       }
       span {
         font-weight: 300;

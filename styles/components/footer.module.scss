@@ -9,5 +9,9 @@
   backdrop-filter: blur($blurSize);
   border: 2px solid transparent;
   background-clip: padding-box;
-  color: #fff;
+
+  p {
+    color: #fff;
+    opacity: 0.8;
+  }
 }

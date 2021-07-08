@@ -8,6 +8,7 @@
     margin-top: 10px;
     font-size: 4rem;
     color: #fff;
+    opacity: 0.8;
 
     span {
       color: $subTextColor;
@@ -19,6 +20,7 @@
   display: flex;
   margin: 40px 0;
   justify-content: center;
+  opacity: 0.8;
 
   .tabs {
     button {

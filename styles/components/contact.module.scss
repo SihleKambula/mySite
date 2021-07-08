@@ -12,9 +12,11 @@
     margin-top: 10px;
     font-size: 4rem;
     color: #fff;
+    opacity: 0.8;
 
     span {
       color: $subTextColor;
+      opacity: 1;
     }
   }
 }
@@ -34,6 +36,7 @@
   p {
     font-size: 1.3rem;
     margin-bottom: 40px;
+    opacity: 0.4;
   }
   div {
     margin-top: 40px;

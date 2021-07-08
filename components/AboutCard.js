@@ -12,8 +12,7 @@ export default function AboutCard() {
       <div className={style.details_container}>
         <div className={style.details}>
           <div className={style.name_and_position}>
-            <p>Sihle Kambula</p>
-            <span>Frontend Web developer</span>
+            <p>Who is Sihle?</p>
           </div>
         </div>
         <div className={style.bio}>
@@ -23,10 +22,6 @@ export default function AboutCard() {
             business site, personal websites and interactive web apps.
           </p>
           <SocialIcons />
-          {/* <p>
-            If you are seeking a web presence or an employer looking to hire,
-            I'm the person for the job.
-          </p> */}
         </div>
       </div>
     </div>

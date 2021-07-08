@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-evenly;
   a {
+    opacity: 0.8;
     &:hover {
       color: $subTextColor;
     }

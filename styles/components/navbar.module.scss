@@ -15,7 +15,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   transition: 0.3s;
 }
 
-.logo {
+.logo_dsk {
   overflow: hidden;
   div {
     overflow: hidden;
@@ -43,21 +43,26 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     padding-bottom: 2px;
     text-transform: lowercase;
     color: #fff;
+    opacity: 0.4;
     letter-spacing: 1px;
 
     &:hover {
-      border-bottom: 2px solid cyan;
+      border-bottom: 2px solid #00aeef;
       color: rgba(255, 255, 255, 0.3);
       transition: all 0.1s ease-in;
       cursor: pointer;
     }
   }
 }
+.hambuger {
+  display: none;
+}
 
 .resume {
-  color: cyan;
-  margin-left: 20px;
+  color: #00aeef;
+  margin: 0 auto;
   text-transform: lowercase;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 680px) {
@@ -70,55 +75,106 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   .navbar_container {
     padding: 5px;
     height: 100%;
-    width: 50%;
+    width: 80%;
+    z-index: 10;
+  }
+
+  .logo_dsk {
+    display: none;
+  }
+  .resume {
+    border: 1px solid #00aeef;
+    border-radius: 10px;
+    padding: 15px 30px;
+    width: fit-content;
   }
   .logo {
-    position: absolute;
-    width: 100%;
-
-    div {
-      width: 50px;
-      margin: 0 auto;
-    }
-  }
-
-  .show_buger {
-    :nth-child(1) {
-      transform: rotate(45deg);
-      width: 80%;
-    }
-    :nth-child(2) {
-      transform: rotate(-45deg);
-      width: 100%;
-    }
-    :nth-child(3) {
-      display: none;
-    }
-  }
-  .hambuger {
-    display: block;
     overflow: hidden;
-    width: 40px;
-    height: 40px;
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     z-index: 999;
-    padding: 5px 5px;
-
+    width: 40px;
     div {
-      margin: 8px 0;
+      width: 40px;
+    }
+  }
+  .hambuger {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    height: 65px;
+    z-index: 99;
+    padding: 10px 15px;
+    position: absolute;
+
+    .lines {
+      overflow: hidden;
+      position: relative;
+      width: 50px;
+      height: 50px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .lines span {
+      display: block;
+      position: absolute;
+      height: 5px;
+      margin-top: 5px;
       width: 100%;
-      height: 3px;
-      background-color: $glassColor;
-      backdrop-filter: blur($blurSize);
-      transition: 0.3s;
+      background: #00aeef;
+      border-radius: 9px;
+      opacity: 1;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
     }
-    :nth-child(2) {
-      width: 80%;
+
+    .lines span:nth-child(1) {
+      top: 0px;
     }
-    :nth-child(3) {
-      width: 60%;
+
+    .lines span:nth-child(2) {
+      top: 10px;
+    }
+
+    .lines span:nth-child(3) {
+      top: 20px;
+    }
+
+    .lines.open span:nth-child(1) {
+      top: 18px;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg);
+    }
+
+    .lines.open span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+
+    .lines.open span:nth-child(3) {
+      top: 18px;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      transform: rotate(-135deg);
     }
   }
   .navbar_links {
@@ -130,8 +186,9 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     .navbar_link,
     .resume {
       text-align: center;
-      margin-top: 10px;
-      font-size: 2rem;
+      margin-top: 30px;
+      font-size: 1.3rem;
+      font-weight: 400;
     }
   }
 }

@@ -12,11 +12,14 @@
   h3 {
     margin: 20px 10px 10px 10px;
     font-size: 1.3rem;
+    opacity: 0.6;
+    font-weight: 400;
   }
   .date {
     margin: 0 10px 10px 10px;
     font-weight: 300;
     font-size: 0.9rem;
+    opacity: 0.6;
   }
   .line_break {
     width: 80px;
@@ -26,7 +29,10 @@
   }
   .description {
     margin: 0 10px 10px 10px;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.3rem;
+    font-weight: 300;
+    opacity: 0.6;
   }
 
   &:hover {

@@ -48,22 +48,29 @@ $subTextColor: rgb(1, 184, 184);
   h3 {
     margin-top: 8px;
     font-size: 1.5rem;
+    opacity: 0.8;
   }
   .para {
     margin: 20px 0;
     padding: 20px;
+    line-height: 1.3rem;
+    font-size: 1.05rem;
+    font-weight: 200;
     background-color: $glassColor;
     backdrop-filter: blur($blurSize);
     border: 2px solid transparent;
     border-radius: 10px;
     background-clip: padding-box;
+    opacity: 0.8;
   }
   span {
     margin-left: 15px;
     font-weight: 300;
+    opacity: 0.8;
   }
   .icons {
     margin-top: 15px;
+    opacity: 0.8;
     a {
       margin-left: 10px;
 
