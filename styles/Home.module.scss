@@ -140,34 +140,46 @@ $subTextColor: rgb(1, 184, 184);
 
 // mobile view
 @media screen and (max-width: 680px) {
+  .landing_section {
+    align-items: flex-start;
+  }
   .intro_card {
+    position: relative;
+    top: 18%;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 0 5px;
     height: auto;
     padding: 10px;
 
-    img {
-      height: 180px;
-      margin: 0 auto;
-    }
+    // img {
+    //   height: 180px;
+    //   margin: 0 auto;
+    // }
 
     div {
       margin-top: 10px;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 500;
+      margin-bottom: 10px;
     }
     h3 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 500;
+      margin-bottom: 20px;
     }
     h4 {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
     }
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .btn {
+      font-size: 1.2rem;
     }
   }
 

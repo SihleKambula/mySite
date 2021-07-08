@@ -43,7 +43,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     padding-bottom: 2px;
     text-transform: lowercase;
     color: #fff;
-    opacity: 0.4;
+    opacity: 0.8;
     letter-spacing: 1px;
 
     &:hover {
@@ -60,7 +60,6 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
 
 .resume {
   color: #00aeef;
-  margin: 0 auto;
   text-transform: lowercase;
   margin-left: 20px;
 }
@@ -76,13 +75,13 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     padding: 5px;
     height: 100%;
     width: 80%;
-    z-index: 10;
   }
 
   .logo_dsk {
     display: none;
   }
   .resume {
+    margin: 0 auto;
     border: 1px solid #00aeef;
     border-radius: 10px;
     padding: 15px 30px;
@@ -94,20 +93,25 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     top: 0;
     right: 0;
     z-index: 999;
-    width: 40px;
+    width: 50px;
     div {
-      width: 40px;
+      width: 100%;
     }
   }
   .hambuger {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     width: 100%;
-    height: 65px;
+    height: auto;
     z-index: 99;
-    padding: 10px 15px;
+    padding: 15px 20px;
     position: absolute;
+    // background-color: $glassColor;
+    // backdrop-filter: blur($blurSize);
+
+    background-clip: padding-box;
 
     .lines {
       overflow: hidden;
