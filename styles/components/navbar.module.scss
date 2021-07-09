@@ -17,21 +17,11 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
 
 .logo_dsk {
   overflow: hidden;
+  margin-top: 5px;
   div {
     overflow: hidden;
-    width: 40px;
+    width: 50px;
     height: 100%;
-    .cls_1 {
-      fill: none;
-      stroke: #00aeef;
-      stroke-miterlimit: 10;
-      stroke-width: 4px;
-    }
-    .cls_2 {
-      font-size: 57px;
-      fill: #00aeef;
-      font-family: ubuntu;
-    }
   }
 }
 
@@ -62,6 +52,12 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   color: #00aeef;
   text-transform: lowercase;
   margin-left: 20px;
+}
+.scrolling {
+  background-color: $glassColor;
+  backdrop-filter: blur($blurSize);
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 @media screen and (max-width: 680px) {

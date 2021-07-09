@@ -4,13 +4,14 @@ import Link from "next/link";
 import style from "../styles/components/navbar.module.scss";
 import cx from "classnames";
 
-export default function Navbar() {
+export default function Navbar({ pageScroll }) {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       {/*  Show the different state of the navbar*/}
       <div
-        className={cx(style.hambuger, isOpen ? style.open : null)}
+        className={cx(style.hambuger, pageScroll > 0 ? style.scrolling : null)}
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className={cx(style.lines, isOpen ? style.open : null)}>
@@ -20,7 +21,7 @@ export default function Navbar() {
         </div>
         <div className={style.logo}>
           <div>
-            <img src='images/logo2.svg' alt='logo' />
+            <img src='images/LOGO.svg' alt='logo' />
           </div>
         </div>
       </div>
@@ -33,7 +34,7 @@ export default function Navbar() {
         >
           <div className={style.logo_dsk}>
             <div>
-              <img src='images/logo2.svg' alt='logo' />
+              <img src='images/LOGO.svg' alt='logo' />
             </div>
           </div>
 

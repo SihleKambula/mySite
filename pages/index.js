@@ -6,15 +6,6 @@ import style from "../styles/Home.module.scss";
 import Blog from "../components/blog";
 import Contact from "../components/contact";
 import Footer from "../components/Footer";
-import { Link } from "next/link";
-
-// import sanityClient from "./api/client";
-// import sanityClient from "@sanity/client";
-// const client = sanityClient({
-//   projectId: "gmrv3avf",
-//   dataset: "production",
-//   useCdn: true,
-// });
 
 import {
   faDesktop,
@@ -23,10 +14,18 @@ import {
   faSitemap,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { useState } from "react";
+
 const Home = ({ posts }) => {
+  const [isScrolling, setScrolling] = useState(0);
+
+  function scrolling(e) {
+    const currentY = e.target.scrollTop;
+    setScrolling(currentY);
+  }
   return (
-    <Layout>
-      <div className={style.background}>
+    <Layout pageScroll={isScrolling}>
+      <div className={style.background} onScroll={scrolling}>
         {/* landing card */}
         <div className={style.landing_section} id='home'>
           <div className={style.intro_card}>
