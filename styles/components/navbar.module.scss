@@ -49,7 +49,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
 }
 
 .resume {
-  color: #00aeef;
+  color: rgb(1, 184, 184);
   text-transform: lowercase;
   margin-left: 20px;
 }
@@ -58,7 +58,6 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur($blurSize);
   border: 2px solid transparent;
   background-clip: padding-box;
-  transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 680px) {
@@ -79,7 +78,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
   }
   .resume {
     margin: 0 auto;
-    border: 1px solid #00aeef;
+    border: 1px solid rgb(1, 184, 184);
     border-radius: 10px;
     padding: 15px 30px;
     width: fit-content;
@@ -91,6 +90,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     right: 0;
     z-index: 999;
     width: 50px;
+
     div {
       width: 100%;
     }
@@ -105,14 +105,13 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
     z-index: 99;
     padding: 15px 20px;
     position: absolute;
-
     background-clip: padding-box;
-    transition: all 0.5s ease;
+
     .lines {
       overflow: hidden;
       position: relative;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
       -o-transform: rotate(0deg);
@@ -130,7 +129,7 @@ $glassColorLight: rgba(255, 255, 255, 0.2);
       height: 5px;
       margin-top: 5px;
       width: 100%;
-      background: #00aeef;
+      background: rgb(1, 184, 184);
       border-radius: 9px;
       opacity: 1;
       -webkit-transform: rotate(0deg);
