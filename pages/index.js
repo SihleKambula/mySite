@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
+import SocialIcons from "../components/SocialIcons";
 
 const Home = ({ posts }) => {
   const [isScrolling, setScrolling] = useState(0);
@@ -58,11 +59,6 @@ const Home = ({ posts }) => {
               <div className={style.card_section}>
                 <AboutCard />
                 <div className={style.cards_of_skills}>
-                  {/* <h3
-                    style={{ margin: "10px", fontWeight: "400", opacity: 0.8 }}
-                  >
-                    Skills
-                  </h3> */}
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faDesktop}
@@ -86,6 +82,9 @@ const Home = ({ posts }) => {
                       end='Tools'
                       skills={["GitHub", "Netlify", "Heroku", "Figma"]}
                     />
+                  </div>
+                  <div className={style.social_icons}>
+                    <SocialIcons />
                   </div>
                 </div>
               </div>

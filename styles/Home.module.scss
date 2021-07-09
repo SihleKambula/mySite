@@ -110,6 +110,15 @@ $subTextColor: rgb(1, 184, 184);
       display: flex;
       margin-bottom: 20px;
     }
+    .social_icons {
+      padding: 20px 30px;
+      margin-left: 20px;
+      background-color: $glassColor;
+      backdrop-filter: blur($blurSize);
+      border: 2px solid transparent;
+      border-radius: 10px;
+      background-clip: padding-box;
+    }
   }
 }
 
@@ -203,6 +212,9 @@ $subTextColor: rgb(1, 184, 184);
       .skill_card {
         display: flex;
         margin: 10px 0;
+      }
+      .social_icons {
+        margin-left: 0;
       }
     }
   }

@@ -8,20 +8,38 @@ library.add(fab);
 export default function AboutCard() {
   return (
     <div className={style.about_card}>
-      <div className={style.about_img}></div>
+      <div className={style.about_img}>
+        <div className={style.overlay}></div>
+        <img src='images/formalMe.png' alt='picture of me' />
+      </div>
       <div className={style.details_container}>
         <div className={style.details}>
           <div className={style.name_and_position}>
-            <p>Who is Sihle?</p>
+            {/* <p>Who is Sihle?</p> */}
           </div>
         </div>
         <div className={style.bio}>
           <p>
-            Hi, my name is Sihle Kambula and I am a front-end web developer from
-            Joburg, South Africa. I enjoy building everything from small
-            business site, personal websites and interactive web apps.
+            I'm a Front-end web developer who has a serious passion for web
+            applications and using code to make a difference in the world.
           </p>
-          <SocialIcons />
+          <p>
+            I love to solve problems and I never quite on finding a solution for
+            a problem.{" "}
+            <a href='https://flutter.dev' target='_blank'>
+              Flutter
+            </a>{" "}
+            and{" "}
+            <a href='https://nextjs.org' target='_blank'>
+              NextJS
+            </a>{" "}
+            fan boy. I am a simple guy who likes complicated things.
+          </p>
+          <p>
+            Interested in the entire web development field and working on
+            amazing, ambitious projects with positive people.
+          </p>
+          {/* <SocialIcons /> */}
         </div>
       </div>
     </div>

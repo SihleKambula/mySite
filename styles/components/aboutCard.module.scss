@@ -3,9 +3,9 @@
 .about_card {
   width: 400px;
   height: 100%;
-  padding: 10px;
+  padding: 0 15px;
   margin-left: 50px;
-  text-align: center;
+  text-align: start;
   background-color: $glassColor;
   backdrop-filter: blur($blurSize);
   border: 2px solid transparent;
@@ -13,11 +13,29 @@
   background-clip: padding-box;
 
   .about_img {
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: auto;
     margin: 10px auto;
-    background: url(../../public/images/face.webp) no-repeat center/cover;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    overflow: hidden;
+    border-radius: 10px;
+
+    // .overlay {
+    //   position: absolute;
+    //   background-color: navy;
+    //   opacity: 0.3;
+    //   width: 200px;
+    //   height: 220px;
+    //   transition: opacity 0.8s ease;
+    //   &:hover {
+    //     opacity: 0;
+    //     transition: opacity 0.8s ease;
+    //   }
+    // }
+
+    img {
+      width: 100%;
+    }
+    // background: url(../../public/images/formal.jpg) no-repeat center/cover;
   }
 
   .details_container {
@@ -28,6 +46,14 @@
         margin: 10px 0;
         line-height: 1.5rem;
         opacity: 0.8;
+      }
+      a {
+        color: $subTextColor;
+
+        &:hover {
+          cursor: pointer;
+          color: cyan;
+        }
       }
 
       button {

@@ -7,5 +7,20 @@
     &:hover {
       color: $subTextColor;
     }
+    p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// mobile view
+@media screen and (max-width: 680px) {
+  .social_icons {
+    a {
+      p {
+        display: none;
+      }
+    }
   }
 }
