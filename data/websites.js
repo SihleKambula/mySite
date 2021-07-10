@@ -6,7 +6,7 @@ const websites = [
     name: "Rise African Child Media",
     description:
       "Rise African Child Media (RACM) is a creative digital platform that aims to tell stories in the TV and film industry, stories that can change the enviroment.",
-    technologies: ["Next.js", "YouTube API", "Gsap.js"],
+    technologies: ["Next.JS", "YouTube API", "Gsap.js"],
   },
   {
     imageUrl: "/images/ziyaMockup.webp",
@@ -15,7 +15,7 @@ const websites = [
     name: "Ziyatech",
     description:
       "A internet solution startup for your business or personal use. ",
-    technologies: ["Next.js", "Google Forms", "Framer Motion", "Axxess"],
+    technologies: ["Next.JS", "Google Forms", "Framer Motion", "Axxess"],
   },
 ];
 export default websites;

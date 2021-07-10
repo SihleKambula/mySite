@@ -65,8 +65,12 @@ $subTextColor: rgb(1, 184, 184);
   }
   span {
     margin-left: 15px;
+    margin-top: 5px;
+    padding: 5px 5px;
     font-weight: 300;
     opacity: 0.8;
+    color: $subTextColor;
+    background-color: $glassColor;
   }
   .icons {
     margin-top: 15px;

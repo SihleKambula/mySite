@@ -7,7 +7,7 @@ export default function ProjectCardRight({ project }) {
   return (
     <div className={style.container}>
       <div className={style.details}>
-        <span className={style.featured}>Featured Project</span>
+        <p className={style.featured}>Featured Project</p>
         <h3>{project.name}</h3>
         <p className={style.para}>{project.description}</p>
         {/* Show list of technologies used */}
@@ -16,14 +16,14 @@ export default function ProjectCardRight({ project }) {
         })}
         <div className={style.icons}>
           {project.gitHubUrl && (
-            <a href={project.gitHubUrl} target="blank">
-              <FontAwesomeIcon icon={faGithub} size="2x" />
+            <a href={project.gitHubUrl} target='blank'>
+              <FontAwesomeIcon icon={faGithub} size='2x' />
             </a>
           )}
 
           {project.url && (
-            <a href={project.url} target="blank">
-              <FontAwesomeIcon icon={faExternalLinkAlt} size="2x" />
+            <a href={project.url} target='blank'>
+              <FontAwesomeIcon icon={faExternalLinkAlt} size='2x' />
             </a>
           )}
         </div>

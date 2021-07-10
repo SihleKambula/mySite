@@ -6,7 +6,7 @@ const projects = [
     name: "Lil Link",
     description:
       "A URL Shortener app. Users can also create an account and save the shorten link for future use.",
-    technologies: ["Next.js", "Node.js", "Firebase", "MongoDB"],
+    technologies: ["React.JS", "Node.JS", "Firebase", "MongoDB"],
   },
   {
     imageUrl: "/images/iqmates.webp",
@@ -24,7 +24,7 @@ const projects = [
     name: "Removy",
     description:
       "I made a background remover web application. I found that using Photoshop to remover image background is tidious and photoshop runs on Windows and Mac. So now I can use the web application on any operating system and it is fast compared to PS. ",
-    technologies: ["Next.js", "AI API", "Node.js"],
+    technologies: ["Next.JS", "AI API", "Node.JS"],
   },
 ];
 export default projects;
