@@ -33,7 +33,7 @@ export default function AboutCard() {
             <a href='https://nextjs.org' target='_blank'>
               NextJS
             </a>{" "}
-            fan boy. I am a simple guy who likes complicated things.
+            fan boy. I am a simple guy who is a big fan of challenges.
           </p>
           <p>
             Interested in the entire web development field and working on
