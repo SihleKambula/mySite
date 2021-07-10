@@ -13,8 +13,9 @@ const websites = [
     url: "https://ziyatech.co.za/",
     gitHubUrl: "https://github.com/SihleKambula/ziyatech",
     name: "Ziyatech",
-    description: "Still in development.",
-    technologies: ["Next.js", "Google Forms", "Framer Motion"],
+    description:
+      "A internet solution startup for your business or personal use. ",
+    technologies: ["Next.js", "Google Forms", "Framer Motion", "Axxess"],
   },
 ];
 export default websites;
