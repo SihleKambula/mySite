@@ -4,11 +4,11 @@ import style from "../styles/components/socialIcons.module.scss";
 export default function SocialIcons() {
   return (
     <div className={style.social_icons}>
-      <a href='https://twitter.com/alphaskam' target='blank'>
+      <a href='https://twitter.com/sihlekam' target='blank'>
         <FontAwesomeIcon icon={["fab", "twitter"]} size='2x' />
         <p>twitter</p>
       </a>
-      <a href='https://www.instagram.com/alphask_dev/' target='blank'>
+      <a href='https://www.instagram.com/sihlekam_codes/' target='blank'>
         <FontAwesomeIcon icon={["fab", "instagram"]} size='2x' />
         <p>instagram</p>
       </a>
