@@ -95,7 +95,7 @@ export default function Projects() {
               className={style.icon}
               size='2x'
             />
-            <p>Mobile Apps</p>
+            <p>Case studies</p>
           </button>
         </div>
       </div>

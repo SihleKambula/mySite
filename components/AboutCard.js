@@ -10,7 +10,7 @@ export default function AboutCard() {
     <div className={style.about_card}>
       <div className={style.about_img}>
         <div className={style.overlay}></div>
-        <img src='images/formalMe.png' alt='picture of me' />
+        <img src='images/web2.png' alt='picture of me' />
       </div>
       <div className={style.details_container}>
         <div className={style.details}>
@@ -25,9 +25,12 @@ export default function AboutCard() {
           </p>
           <p>
             I love to solve problems and I never quite on finding a solution for
-            a problem.{" "}
+            a problem.
             <a href='https://flutter.dev' target='_blank'>
-              Flutter
+              Flutter,
+            </a>{" "}
+            <a href='https://reactjs.org/' target='_blank'>
+              ReactJS
             </a>{" "}
             and{" "}
             <a href='https://nextjs.org' target='_blank'>
