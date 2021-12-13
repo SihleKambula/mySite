@@ -10,7 +10,7 @@ export default function AboutCard() {
     <div className={style.about_card}>
       <div className={style.about_img}>
         <div className={style.overlay}></div>
-        <img src='images/web2.png' alt='picture of me' />
+        <img src='images/web2.webp' alt='picture of me' />
       </div>
       <div className={style.details_container}>
         <div className={style.details}>
