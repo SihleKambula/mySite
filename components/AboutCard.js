@@ -20,28 +20,26 @@ export default function AboutCard() {
         </div>
         <div className={style.bio}>
           <p>
-            I'm a Front-end web developer who has a serious passion for web
-            applications and using code to make a difference in the world.
+            I'm a React developer who has a serious passion for web and mobile
+            applications. I enjoy using code to make a difference in the world
+            and to create awesome applications.
           </p>
           <p>
-            I love to solve problems and I never quite on finding a solution for
-            a problem.
-            <a href='https://flutter.dev' target='_blank'>
-              Flutter,
+            I love to solve problems and I never give up on finding a solution
+            for a problem. I am a{" "}
+            <a href='https://reactnative.dev/' target='_blank'>
+              React Native,
             </a>{" "}
             <a href='https://reactjs.org/' target='_blank'>
               ReactJS
             </a>{" "}
             and{" "}
-            <a href='https://nextjs.org' target='_blank'>
-              NextJS
+            <a href='https://firebase.google.com/' target='_blank'>
+              Firebase
             </a>{" "}
             fan boy. I am a simple guy who is a big fan of challenges.
           </p>
-          <p>
-            Interested in the entire web development field and working on
-            amazing, ambitious projects with positive people.
-          </p>
+          <p>I enjoy working with a great team that can have fun and code.</p>
           {/* <SocialIcons /> */}
         </div>
       </div>
