@@ -63,19 +63,24 @@ const Home = ({ posts }) => {
                     <SkillCard
                       icon={faDesktop}
                       end='Frontend'
-                      skills={["React.JS", "Next.JS", "JavaScript", "Sass"]}
+                      skills={[
+                        "React.JS",
+                        "Next.JS",
+                        "JavaScript",
+                        "HTML & CSS",
+                      ]}
                     />
                     <SkillCard
                       icon={faDatabase}
                       end='Backend'
-                      skills={["Firebase", "Node.JS", "MongoDB", "PHP"]}
+                      skills={["Firebase", "Node.JS", "MongoDB"]}
                     />
                   </div>
                   <div className={style.skill_card}>
                     <SkillCard
                       icon={faMobileAlt}
-                      end='Mobile Apps'
-                      skills={["Flutter", "Dart"]}
+                      end='Mobile Dev'
+                      skills={["React Native"]}
                     />
                     <SkillCard
                       icon={faSitemap}
