@@ -8,8 +8,8 @@ export default function Resume() {
       </Head>
       <div style={{ height: "100vh", overflow: "hidden" }}>
         <embed
-          src="/Sihle Kambula.pdf"
-          type="application/pdf"
+          src='/Sihle Kambula 1.pdf'
+          type='application/pdf'
           style={{ width: "100%", height: "100%" }}
         />
       </div>
