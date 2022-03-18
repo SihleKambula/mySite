@@ -34,11 +34,11 @@ const Home = ({ posts }) => {
             <div>
               <p>Hello hello, my name is</p>
               <h2>Sihle Kambula,</h2>
-              <h3>Frontend Web Developer</h3>
+              <h3>A React Developer</h3>
               <h4>
-                I am a front-end web developer / freelancer from Joburg, South
-                Africa. I enjoy building everything from small business site,
-                personal websites and interactive web apps.
+                I am a React developer from Johannesburg, South Africa. I enjoy
+                building everything from small business site, personal websites,
+                interactive web apps and mobile app.
               </h4>
               <a href='mailto:kambulasihle@gmail.com' className={style.btn}>
                 Hire Me
