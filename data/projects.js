@@ -1,6 +1,6 @@
 const projects = [
   {
-    imageUrl: "/images/lilLink1.webp",
+    imageUrl: "/images/lillink_.webp",
     url: "https://lil-link.vercel.app/",
     gitHubUrl: "https://github.com/SihleKambula/url_shorten_all",
     name: "Lil Link",
@@ -18,7 +18,7 @@ const projects = [
     technologies: ["JavaScript", "PHP", "MySQL", "Bootstrap"],
   },
   {
-    imageUrl: "/images/background_remover.webp",
+    imageUrl: "/images/Removy_.webp",
     url: "https://bgremover-frontend.vercel.app/",
     gitHubUrl: "https://github.com/SihleKambula/bgremover_frontend",
     name: "Removy",
