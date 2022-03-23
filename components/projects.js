@@ -100,9 +100,11 @@ export default function Projects() {
         </div>
       </div>
 
-      {!showApps && !showWebApps && <WebApps />}
-      {/* {showWebApps && <Websites />} */}
-      {showApps && <MobileApps />}
+      <div className={style.projectGrid}>
+        {!showApps && !showWebApps && <WebApps />}
+        {/* {showWebApps && <Websites />} */}
+        {showApps && <MobileApps />}
+      </div>
     </div>
   );
 }

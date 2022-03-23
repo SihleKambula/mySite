@@ -1,6 +1,6 @@
 const projects = [
   {
-    imageUrl: "/images/lillink_.webp",
+    imageUrl: "/images/lillink_bg.png",
     url: "https://lil-link.vercel.app/",
     gitHubUrl: "https://github.com/SihleKambula/url_shorten_all",
     name: "Lil Link",
@@ -9,7 +9,7 @@ const projects = [
     technologies: ["React.JS", "Node.JS", "Firebase", "MongoDB"],
   },
   {
-    imageUrl: "/images/iqmates.webp",
+    imageUrl: "/images/IQmatesbg.png",
     url: "http://www.iqmates.com/",
     gitHubUrl: null,
     name: "IQmates",
@@ -18,13 +18,13 @@ const projects = [
     technologies: ["JavaScript", "PHP", "MySQL", "Bootstrap"],
   },
   {
-    imageUrl: "/images/Removy_.webp",
-    url: "https://bgremover-frontend.vercel.app/",
-    gitHubUrl: "https://github.com/SihleKambula/bgremover_frontend",
-    name: "Removy",
+    imageUrl: "/images/imageSafe_bg.png",
+    url: "https://imagesafe.netlify.app/",
+    gitHubUrl: "https://github.com/SihleKambula/imageSafe",
+    name: "ImageSafe",
     description:
-      "I made a background remover web application. I found that using Photoshop to remover image background is tidious and photoshop runs on Windows and Mac. So now I can use the web application on any operating system and it is fast compared to PS. ",
-    technologies: ["Next.JS", "AI API", "Node.JS"],
+      "ImageSafe is an application that allows you to save images to the cloud and access them from any device. ",
+    technologies: ["React.JS", "Redux", "Firebase"],
   },
 ];
 export default projects;
