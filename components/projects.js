@@ -1,7 +1,7 @@
 import { useState } from "react";
 import webApps from "../data/projects";
 import apps from "../data/apps";
-import websites from "../data/websites";
+// import websites from "../data/websites";
 import style from "../styles/components/projects.module.scss";
 import ProjectCard from "./projectCard";
 import ProjectCardRight from "./projectCardRight";
@@ -16,6 +16,7 @@ import {
 export default function Projects() {
   const MobileApps = () => {
     return apps.map((app, index) => {
+      return <ProjectCard project={app} key={index} />;
       return index % 2 === 0 ? (
         <ProjectCard project={app} key={index} />
       ) : (
@@ -36,6 +37,7 @@ export default function Projects() {
 
   const WebApps = () => {
     return webApps.map((project, index) => {
+      return <ProjectCard project={project} key={index} />;
       return index % 2 == 0 ? (
         <ProjectCard project={project} key={index} />
       ) : (

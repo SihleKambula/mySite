@@ -6,7 +6,7 @@ import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 export default function ProjectCard({ project }) {
   return (
     <div className={style.container}>
-      <a href={project.url} target='blank'>
+      <a href={project.url} target='_blank'>
         <div
           className={style.img}
           style={{

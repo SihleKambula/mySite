@@ -5,15 +5,21 @@ $subTextColor: rgb(1, 184, 184);
   width: 100%;
   overflow: hidden;
   position: relative;
-  // margin: 30px auto;
+  margin: 30px auto;
   color: #fff;
   display: flex;
+  flex-direction: row;
+  background-color: $glassColor;
+  backdrop-filter: blur($blurSize);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+  opacity: 0.8;
 }
 
 .img {
-  width: 600px;
-  position: relative;
-  height: 350px;
+  width: 500px;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,38 +40,31 @@ $subTextColor: rgb(1, 184, 184);
 }
 
 .details {
-  position: absolute;
-  width: 500px;
+  width: fit-content;
   height: 350px;
-  text-align: end;
-  top: 20px;
-  left: 500px;
+  text-align: start;
 
   .featured {
     margin-top: 20px;
+    padding: 10px;
     font-weight: 300;
     color: $subTextColor;
   }
   h3 {
     margin-top: 8px;
+    padding: 0 10px;
     font-size: 1.5rem;
     opacity: 0.8;
   }
   .para {
     margin: 20px 0;
-    padding: 20px;
+    padding: 20px 10px;
     line-height: 1.3rem;
     font-size: 1.05rem;
     font-weight: 200;
-    background-color: $glassColor;
-    backdrop-filter: blur($blurSize);
-    border: 2px solid transparent;
-    border-radius: 10px;
-    background-clip: padding-box;
-    opacity: 0.8;
   }
   span {
-    margin-left: 15px;
+    margin-left: 10px;
     margin-top: 5px;
     padding: 5px 5px;
     font-weight: 300;
