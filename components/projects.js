@@ -24,15 +24,15 @@ export default function Projects() {
     });
   };
 
-  const Websites = () => {
-    return websites.map((website, index) => {
-      return index % 2 === 0 ? (
-        <ProjectCard project={website} key={index} />
-      ) : (
-        <ProjectCardRight project={website} key={index} />
-      );
-    });
-  };
+  // const Websites = () => {
+  //   return websites.map((website, index) => {
+  //     return index % 2 === 0 ? (
+  //       <ProjectCard project={website} key={index} />
+  //     ) : (
+  //       <ProjectCardRight project={website} key={index} />
+  //     );
+  //   });
+  // };
 
   const WebApps = () => {
     return webApps.map((project, index) => {
@@ -63,10 +63,10 @@ export default function Projects() {
             }}
           >
             <FontAwesomeIcon icon={faDiceD6} className={style.icon} size='2x' />
-            <p> Web Apps</p>
+            <p> Web Applications</p>
           </button>
         </div>
-        <div className={style.tabs}>
+        {/* <div className={style.tabs}>
           <button
             className={showWebApps ? style.active : null}
             onClick={() => {
@@ -81,7 +81,7 @@ export default function Projects() {
             />
             <p>Websites</p>
           </button>
-        </div>
+        </div> */}
         <div className={style.tabs}>
           <button
             className={showApps ? style.active : null}
@@ -95,13 +95,13 @@ export default function Projects() {
               className={style.icon}
               size='2x'
             />
-            <p>Case studies</p>
+            <p>Mobile Applications</p>
           </button>
         </div>
       </div>
 
       {!showApps && !showWebApps && <WebApps />}
-      {showWebApps && <Websites />}
+      {/* {showWebApps && <Websites />} */}
       {showApps && <MobileApps />}
     </div>
   );
