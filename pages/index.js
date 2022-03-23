@@ -37,11 +37,11 @@ const Home = ({ posts }) => {
               <h3>A React Developer</h3>
               <h4>
                 I am a React developer from Johannesburg, South Africa. I enjoy
-                building everything from small business site, personal websites,
-                interactive web apps and mobile app.
+                building interactive web applications, portfolio websites and
+                mobile applications.
               </h4>
               <a href='mailto:kambulasihle@gmail.com' className={style.btn}>
-                Hire Me
+                Get in touch
               </a>
             </div>
           </div>
