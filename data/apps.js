@@ -1,16 +1,17 @@
 const apps = [
   {
-    imageUrl: "/images/legends.webp",
+    imageUrl: "/images/imagesafemock.png",
     url: null,
-    gitHubUrl: "/",
-    name: "Legends Barber Booking App",
-    description: "A prototype booking application for legends barber shop.",
-    technologies: ["Flutter", "Firebase"],
+    gitHubUrl: "https://github.com/SihleKambula/imageSafe_mobile",
+    name: "Image Safe",
+    description:
+      "Image safe is an application that allows the user to share image files between devices.",
+    technologies: ["React Native", "Redux", "Firebase"],
   },
   {
     imageUrl: "/images/scrummy.webp",
     url: null,
-    gitHubUrl: "https://github.com/SihleKambula/legends",
+    gitHubUrl: null,
     name: "Scrummy Ice Cream App",
     description: "A ice cream ordering app filled with all the flavours.",
     technologies: ["Flutter", "Firebase"],
