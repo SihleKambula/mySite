@@ -104,9 +104,9 @@ const Home = ({ posts }) => {
 
           {/* Blog section */}
 
-          <section id='blog'>
+          {/* <section id='blog'>
             <Blog blogs={posts} />
-          </section>
+          </section> */}
 
           {/* Contact section */}
 
@@ -123,25 +123,25 @@ const Home = ({ posts }) => {
   );
 };
 
-export async function getStaticProps() {
-  const query = encodeURIComponent(`*[ _type == "post"]`);
-  const url = `https://gmrv3avf.api.sanity.io/v1/data/query/production?query=${query}`;
-  // fetch post from sanity
-  const result = await fetch(url).then((data) => data.json());
+// export async function getStaticProps() {
+//   const query = encodeURIComponent(`*[ _type == "post"]`);
+//   const url = `https://gmrv3avf.api.sanity.io/v1/data/query/production?query=${query}`;
+//   // fetch post from sanity
+//   const result = await fetch(url).then((data) => data.json());
 
-  if (!result.result || !result.result.length) {
-    return {
-      props: {
-        posts: [],
-      },
-    };
-  } else {
-    return {
-      props: {
-        posts: result.result,
-      },
-    };
-  }
-}
+//   if (!result.result || !result.result.length) {
+//     return {
+//       props: {
+//         posts: [],
+//       },
+//     };
+//   } else {
+//     return {
+//       props: {
+//         posts: result.result,
+//       },
+//     };
+//   }
+// }
 
 export default Home;
