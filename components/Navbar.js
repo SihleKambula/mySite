@@ -57,12 +57,12 @@ export default function Navbar({ pageScroll }) {
             >
               <Link href='#projects'>Projects</Link>
             </li>
-            <li
+            {/* <li
               className={style.navbar_link}
               onClick={() => setIsOpen(!isOpen)}
             >
               <Link href='#blog'>Blog</Link>
-            </li>
+            </li> */}
             <li
               className={style.navbar_link}
               onClick={() => setIsOpen(!isOpen)}
